@@ -1,0 +1,14 @@
+C:\Users\david\workspace\personal\DavesList\DavesList\bin\Debug\netcoreapp2.1\DavesList.deps.json
+C:\Users\david\workspace\personal\DavesList\DavesList\bin\Debug\netcoreapp2.1\DavesList.runtimeconfig.json
+C:\Users\david\workspace\personal\DavesList\DavesList\bin\Debug\netcoreapp2.1\DavesList.runtimeconfig.dev.json
+C:\Users\david\workspace\personal\DavesList\DavesList\bin\Debug\netcoreapp2.1\DavesList.dll
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.csprojAssemblyReference.cache
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.csproj.CoreCompileInputs.cache
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.RazorAssemblyInfo.cache
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.RazorAssemblyInfo.cs
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.AssemblyInfoInputs.cache
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.AssemblyInfo.cs
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.RazorTargetAssemblyInfo.cache
+C:\Users\david\workspace\personal\DavesList\DavesList\bin\Debug\netcoreapp2.1\DavesList.pdb
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.dll
+C:\Users\david\workspace\personal\DavesList\DavesList\obj\Debug\netcoreapp2.1\DavesList.pdb
