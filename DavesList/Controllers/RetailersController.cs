@@ -16,17 +16,50 @@ namespace DavesList.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var retailers = await _context.Retailers.ToListAsync();
+            try
+            {
+                var retailers = await _context.Retailers.ToListAsync();
 
-            return Ok(retailers);
+                return Ok(retailers);
+            }
+            catch (Exception e)
+            {
+                LogException(e);
+                return BadRequest($"{e}");
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var retailer = await _context.Retailers.FirstOrDefaultAsync();
+            try
+            {
+                var retailer = await _context.Retailers.FirstOrDefaultAsync();
 
-            return Ok(retailer);
+                return Ok(retailer);
+            }
+            catch (Exception e)
+            {
+                LogException(e);
+                return BadRequest($"{e}");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(int id, Retailer retailer)
+        {
+            try
+            {
+                _context.Retailers.Add(retailer);
+                await _context.SaveChangesAsync();
+
+                return Ok(retailer);
+            }
+            catch (Exception e)
+            {
+                LogException(e);
+                return BadRequest($"{e}");
+            }
         }
 
         public RetailersController(DataContext context) : base(context)

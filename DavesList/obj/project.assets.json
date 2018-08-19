@@ -12225,11 +12225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\david\\workspace\\personal\\DavesList\\DavesList\\DavesList.csproj",
+      "projectUniqueName": "C:\\Users\\david\\workspace\\DavesList\\DavesList\\DavesList.csproj",
       "projectName": "DavesList",
-      "projectPath": "C:\\Users\\david\\workspace\\personal\\DavesList\\DavesList\\DavesList.csproj",
+      "projectPath": "C:\\Users\\david\\workspace\\DavesList\\DavesList\\DavesList.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david\\workspace\\personal\\DavesList\\DavesList\\obj\\",
+      "outputPath": "C:\\Users\\david\\workspace\\DavesList\\DavesList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
