@@ -31,6 +31,8 @@ namespace DavesList
 
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer("Data Source=(local);Initial Catalog=DavesListCore;User=CT_DBAdmin;Password=22seavey"));
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +48,7 @@ namespace DavesList
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }
