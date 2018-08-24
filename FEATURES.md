@@ -13,7 +13,8 @@
   - User can save a list of their favorite retailers
 - Share certain parts of the application on social media
 - Highlight a retailer of the week
-- Highlight newly added or trending retailers 
+- Highlight newly added or trending retailers
+- Have an email subscription service, so users can keep up-to-date with recently added reatilers, categories, products, and app features.
 
 ## Possible ways to make money
 - Sell ad space
@@ -21,4 +22,4 @@
 - Have free and premium memberships for retailers
   - Retailers could potentially list their business for free
   - If they signed up for a premium membership, they could have login access to their dashboard, where they could see certain info
-- 
+  - For a small Patreon donation, they can get certain perks such as premium space on the homepage as a Featured Retailer, on the home page as a trending product, or be listed first on their particular category page.
