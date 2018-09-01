@@ -15,6 +15,8 @@
 - Highlight a retailer of the week
 - Highlight newly added or trending retailers
 - Have an email subscription service, so users can keep up-to-date with recently added reatilers, categories, products, and app features.
+- Have a table in DB called "Materials" or something similar, which could be used as another way to categorize, and another way for users to search for things. An example of a Material could be wood, and if the user browsed all "wood" materials, they would find all retailers that sell up-cycled products made from wood.
+- Have a section where people can find businesses or retailers that accept your used materials/goods to upcycle for their products.
 
 ## Possible ways to make money
 - Sell ad space
