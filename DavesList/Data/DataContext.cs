@@ -14,5 +14,6 @@ namespace DavesList.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Retailer> Retailers { get; set; }
         public DbSet<RetailerCategory> RetailerCategories { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
