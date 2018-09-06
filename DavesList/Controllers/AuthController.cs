@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using DavesList.Data;
+using DavesList.Dtos;
 using DavesList.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,21 +17,21 @@ namespace DavesList.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(string username, string password)
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
             // validate request
 
-            username = username.ToLower();
+            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
-            if (await _repo.UserExists(username))
+            if (await _repo.UserExists(userForRegisterDto.Username))
                 return BadRequest("Username already exists");
 
             var userToCreate = new User
             {
-                Username = username
+                Username = userForRegisterDto.Username
             };
 
-            var createdUser = await _repo.RegisterAsync(userToCreate, password);
+            var createdUser = await _repo.RegisterAsync(userToCreate, userForRegisterDto.Password);
 
             return StatusCode(201);
         }
