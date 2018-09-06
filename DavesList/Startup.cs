@@ -33,6 +33,8 @@ namespace DavesList
                 options.UseSqlServer("Data Source=(local);Initial Catalog=DavesListCore;User=CT_DBAdmin;Password=22seavey"));
 
             services.AddCors();
+
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
