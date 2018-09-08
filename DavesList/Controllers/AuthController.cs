@@ -20,8 +20,8 @@ namespace DavesList.Controllers
         private readonly IConfiguration _config;
         public AuthController(IAuthRepository repo, IConfiguration config)
         {
-            _repo = repo;
             _config = config;
+            _repo = repo;
         }
 
         [HttpPost("register")]
@@ -64,7 +64,7 @@ namespace DavesList.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1), // Sets the amount of days until the user's login expires
+                Expires = DateTime.Now.AddDays(10), // Sets the amount of days until the user's login expires
                 SigningCredentials = creds
             };
 
