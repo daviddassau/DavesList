@@ -4,17 +4,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using DavesList.Data;
 using DavesList.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DavesList.Controllers
 {
+    [Authorize]
     [Route("api/categories")]
     [ApiController]
     public class CategoriesController : BaseController
     {
+        [AllowAnonymous]
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllCategoriesAsync()
         {
             try
             {
@@ -30,28 +33,11 @@ namespace DavesList.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetSingleCategoryAsync(int id)
         {
             try
             {
                 var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
-
-                return Ok(category);
-            }
-            catch (Exception e)
-            {
-                LogException(e);
-                return BadRequest($"{e}");
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Post(int id, Category category)
-        {
-            try
-            {
-                _context.Categories.Add(category);
-                await _context.SaveChangesAsync();
 
                 return Ok(category);
             }

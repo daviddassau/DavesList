@@ -14,7 +14,7 @@ namespace DavesList.Controllers
     public class RetailerCategoriesController : BaseController
     {
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllRetailerCategoriesAsync()
         {
             try
             {
@@ -30,28 +30,11 @@ namespace DavesList.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetSingleRetailerCategoryAsync(int id)
         {
             try
             {
                 var retailerCategory = await _context.RetailerCategories.FirstOrDefaultAsync();
-
-                return Ok(retailerCategory);
-            }
-            catch (Exception e)
-            {
-                LogException(e);
-                return BadRequest($"{e}");
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Post(int id, RetailerCategory retailerCategory)
-        {
-            try
-            {
-                _context.RetailerCategories.Add(retailerCategory);
-                await _context.SaveChangesAsync();
 
                 return Ok(retailerCategory);
             }
