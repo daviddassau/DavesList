@@ -32,6 +32,7 @@ namespace DavesList.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSingleCategoryAsync(int id)
         {
