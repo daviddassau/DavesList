@@ -14,13 +14,17 @@ namespace DavesList.Controllers
     public class RetailerCategoriesController : BaseController
     {
         [HttpGet]
-        public async Task<IActionResult> GetAllRetailerCategoriesAsync()
+        public async Task<ActionResult> GetAllRetailersWithCategory()
         {
             try
             {
-                var retailerCategories = await _context.RetailerCategories.ToListAsync();
+                var output = await (from r in _context.Retailers
+                                    join rc in _context.RetailerCategories on r.Id equals rc.RetailerId
+                                    join c in _context.Categories on rc.CategoryId equals c.Id
+                                    where r.Id == r.Id
+                                    select new { r.Name, r.Location, r.Website, r.Details, r.Photo, c.CategoryName }).ToListAsync();
 
-                return Ok(retailerCategories);
+                return Ok(output);                
             }
             catch (Exception e)
             {

@@ -29,6 +29,20 @@ namespace DavesList.Controllers
             }
         }
 
+        // [HttpGet]
+        // public async Task<ActionResult> GetFirstThreeRetailersAsync()
+        // {
+        //     try
+        //     {
+        //         var retailers = await _context.Retailers.Select(r => r.retailers)
+        //     }
+        //     catch (Exception e)
+        //     {
+        //         LogException(e);
+        //         return BadRequest($"{e}");
+        //     }
+        // }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSingleRetailerAsync(int id)
         {

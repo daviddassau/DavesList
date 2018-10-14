@@ -9,5 +9,6 @@ namespace DavesList.Models
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
+        public string Photo { get; set; }
     }
 }

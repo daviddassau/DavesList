@@ -1,10 +1,180 @@
-<div class="container mt-5">
-  <div *ngIf="!registerMode" style="text-align: center">
-    <h1>Register for Dave's List!</h1>
-    <p class="lead">Sign up, and start buying green!</p>
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
-      <button class="btn btn-info btn-lg">Learn more</button>
+<div>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4 text-center">Live green. Buy responsibly.</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <p class="lead text-center">Dave's List is an opportunity for you to discover businesses and online retailers that specialize 
+            in products that are responsibly-made. 
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-12">
+          <form class="form-inline">
+            <input type="text" class="form-control mb-2 mr-sm-2 col-md-11" 
+              id="inlineFormInputName2" placeholder="Search Categories or Retailers">
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="display-4">Live green. Buy responsibly.</h1>
+          <p class="lead">Dave's List is an opportunity for you to discover businesses and online retailers that specialize 
+            in products that are responsibly-made. 
+          </p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-primary btn-lg">
+            Learn more
+          </button>
+        </div>
+      </div>
+      
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <div class="row mt-3">
+        <div class="col-md-12">
+            <form class="form-inline">
+              <label class="sr-only" for="inlineFormInputName2">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2 col-md-8" 
+                id="inlineFormInputName2" placeholder="Search Categories or Retailers">
+              <button type="submit" class="btn btn-primary mb-2">Search</button>
+            </form>
+        </div>    
+      </div>
+    </div>
+  </div> -->
+
+  <!-- BEGIN CAROUSEL -->
+  <!-- <carousel>
+    <slide>
+      <img src="https://via.placeholder.com/1066px461/" alt="first slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="https://via.placeholder.com/1066px461/" alt="second slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="https://via.placeholder.com/1066px461/" alt="third slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </slide>
+  </carousel> -->
+  <!-- END CAROUSEL -->
+
+  <!-- BEGIN CATEGORIES -->
+  <div class="container">
+    <h1 class="text-center mt-5">Categories</h1>
+    <div class="row">
+      <div *ngFor="let category of categories" class="col-md-3 mt-4">
+        <div class="card border-0 dl-category-ds">
+          <div class="dl-card-img-wrapper">
+            <img src="{{category.photo}}" class="card-img-top" alt="Card image cap">
+          </div>
+          <div class="card-body dl-card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="card-title">{{category.categoryName}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END CATEGORIES -->
+
+  <!-- BEGIN FEATURED RETAILERS -->
+  <div class="container mt-5">
+    <h1 class="text-center">Featured Retailers</h1>
+    <div class="row">
+      <div *ngFor="let retailer of retailerCategories" class="col-md-4 mt-4">
+        <div class="card border-0 dl-category-ds">
+          <div class="dl-card-img-wrapper">
+            <img src="{{retailer.photo}}" class="img-fluid" height="200px" alt="">
+          </div>
+          <div class="card-body">
+            <p class="card-text"><small class="text-muted">{{retailer.categoryName}}</small></p>
+            <h5 class="card-title">{{retailer.name}}</h5>
+            <p class="card-text">{{retailer.details}}</p>
+            <div class="row">
+              <div class="col-md-6 small">
+                <p>{{retailer.location}}</p>
+              </div>
+              <div class="col-md-6 small text-right">
+                <p>{{retailer.website}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <i class="fa fa-facebook fa-1x dl-icon-margin-right" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-1x dl-icon-margin-right" aria-hidden="true"></i>
+                <i class="fa fa-instagram fa-1x dl-icon-margin-right" aria-hidden="true"></i>
+                <i class="fa fa-youtube fa-1x" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+  <!-- END FEATURED RETAILERS -->
+
+  <!-- BEGIN REGISTER SECTION -->
+  <div class="container">
+    <div *ngIf="!registerMode" class="mt-5 mb-5" style="text-align: center">
+      <h1>Sign up, and start buying green!</h1>
+      <h2 class="lead">It's free for users!</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+          <p>
+            Rate and review retailers
+          </p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-bookmark fa-5x" aria-hidden="true"></i>
+          <p>
+            Bookmark your favorite retailers and products
+          </p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+          <p>
+            Get exclusive updates when we list new retailers 
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+        <button class="btn btn-info btn-lg">Learn more</button>
+      </div>
     </div>
   </div>
 
@@ -15,4 +185,28 @@
       </div>
     </div>
   </div>
+  <!-- END REGISTER SECTION -->
+
+  <!-- List your business -->
+  <div class="container">
+    <div *ngIf="!registerMode" class="mt-5 mb-5" style="text-align: center">
+      <h1>List your business on Dave's List</h1>
+      <p class="lead">Click here to learn more about listing your business on the site that gets literally tens of visits per month.
+      </p>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+        <button class="btn btn-info btn-lg">Learn more</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+      </div>
+    </div>
+  </div>
+
+
 </div>

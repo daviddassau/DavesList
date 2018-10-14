@@ -12,5 +12,7 @@ namespace DavesList.Models
         public string Location { get; set; }
         public string Website { get; set; }
         public string Details { get; set; }
+        public string Photo { get; set; }
+        public ICollection<Photo> Photos { get; set; }
     }
 }
