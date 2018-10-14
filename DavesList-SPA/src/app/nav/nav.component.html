@@ -2,8 +2,8 @@
   <div class="container">
       <a class="navbar-brand" [routerLink]="['/home']">Dave's List</a>
 
-      <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/categories']">Categories</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
@@ -11,7 +11,40 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Page 3</a>
-        </li>
+        </li> -->
+        <div class="dropdown mr-3" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>
+            Categories
+          </a>
+          <div class="dropdown-menu" *dropdownMenu>
+            <a class="dropdown-item" [routerLink]="['/categories']">All Categories</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Most Popular</a>
+            <a class="dropdown-item" href="#">Recently Added</a>
+          </div>
+        </div>
+        <div class="dropdown mr-3" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>
+            Retailers
+          </a>
+          <div class="dropdown-menu" *dropdownMenu>
+            <a class="dropdown-item" [routerLink]="['/retailers']">All Retailers</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Most Popular</a>
+            <a class="dropdown-item" href="#">Recently Added</a>
+          </div>
+        </div>
+        <div class="dropdown" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>
+            About
+          </a>
+          <div class="dropdown-menu" *dropdownMenu>
+            <a class="dropdown-item" href="#">About Dave's List</a>
+            <a class="dropdown-item" href="#">Sign Up</a>
+            <a class="dropdown-item" href="#">List your business</a>
+            <a class="dropdown-item" href="#">Contact</a>            
+          </div>
+        </div>
       </ul>
     
       <div *ngIf="loggedIn()" class="dropdown" dropdown>

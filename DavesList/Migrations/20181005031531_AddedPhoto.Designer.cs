@@ -4,14 +4,16 @@ using DavesList.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DavesList.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20181005031531_AddedPhoto")]
+    partial class AddedPhoto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,23 +36,6 @@ namespace DavesList.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("DavesList.Models.Photo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("PhotoUrl");
-
-                    b.Property<int?>("RetailerId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RetailerId");
-
-                    b.ToTable("Photos");
-                });
-
             modelBuilder.Entity("DavesList.Models.Retailer", b =>
                 {
                     b.Property<int>("Id")
@@ -62,8 +47,6 @@ namespace DavesList.Migrations
                     b.Property<string>("Location");
 
                     b.Property<string>("Name");
-
-                    b.Property<string>("Photo");
 
                     b.Property<string>("Website");
 
@@ -102,13 +85,6 @@ namespace DavesList.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("DavesList.Models.Photo", b =>
-                {
-                    b.HasOne("DavesList.Models.Retailer")
-                        .WithMany("Photos")
-                        .HasForeignKey("RetailerId");
                 });
 #pragma warning restore 612, 618
         }
